@@ -3,6 +3,7 @@ export { ICandleVote, CandleVoteSchema } from './candle-vote';
 export { ICandleVoteResult } from './candle-vote-result';
 export { ICheer, CheerSchema } from './cheer';
 export { IGitHubRepo, GitHubRepoModel } from './github-repo';
+export { IGitHubIssue } from './github-issue';
 export { IProjectSettings, IRepository, IIssue } from './project-settings';
 export { IRaider, RaiderSchema } from './raider';
 export { IStream, StreamModel } from './stream';

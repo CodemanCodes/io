@@ -5,7 +5,7 @@ import { Helix } from './helix';
 import { Github } from './github';
 import { Kraken } from './kraken';
 import { log } from '@shared/common';
-import { IUserInfo } from '@shared/models';
+import { IUserInfo, IGitHubRepo, IGitHubIssue } from '@shared/models';
 
 export class API {
   public app: express.Application;

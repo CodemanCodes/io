@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 import { IUserInfo } from "./user-info";
+import { IGitHubIssue } from "./github-issue";
 
 export interface IGitHubRepo extends mongoose.Document {
     description: string;
@@ -9,6 +10,7 @@ export interface IGitHubRepo extends mongoose.Document {
     name: string;
     open_issues_count: number;
     private: boolean;
+    issues?: IGitHubIssue[];
     contributors?: IUserInfo[];
 }
 
@@ -22,6 +24,7 @@ export const GitHubRepoModel = mongoose.model<IGitHubRepo>(
         name: String,
         open_issues_count: Number,
         private: Boolean,
+        issues: [{ type: mongoose.Schema.Types.ObjectId, ref: "Issue" }],
         contributors: [{ type: mongoose.Schema.Types.ObjectId, ref: "UserInfo" }]
     })
 );
